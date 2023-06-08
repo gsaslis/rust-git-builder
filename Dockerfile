@@ -9,5 +9,5 @@ RUN apt-get update \
   && git --version
 
 RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y \
-  && source "$HOME/.cargo/env" \
-  cargo --version
+  && . "$HOME/.cargo/env" \
+  && cargo --version
