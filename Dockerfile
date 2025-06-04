@@ -8,6 +8,6 @@ RUN apt-get update \
   && apt-get install -y git curl gcc tree jq sqlite3 \
   && git --version
 
-RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- --default-toolchain=1.80.0 -y \
+RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- --default-toolchain=1.85.0 -y \
   && . "$HOME/.cargo/env" \
   && cargo --version
