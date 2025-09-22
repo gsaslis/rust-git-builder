@@ -20,3 +20,5 @@ RUN tmp="$(mktemp)" \
 RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- --default-toolchain=1.88.0 -y \
   && . "$HOME/.cargo/env" \
   && cargo --version
+
+RUN curl -LsSf https://get.nexte.st/latest/linux-musl | tar zxf - -C ${CARGO_HOME:-~/.cargo}/bin
