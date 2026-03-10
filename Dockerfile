@@ -17,7 +17,7 @@ RUN tmp="$(mktemp)" \
   && apt-get update \
   && apt-get install --assume-yes --no-remove subplot
 
-RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- --default-toolchain=1.88.0 -y \
+RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- --default-toolchain=1.90.0 -y \
   && . "$HOME/.cargo/env" \
   && cargo --version
 
